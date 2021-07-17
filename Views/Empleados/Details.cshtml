@@ -1,0 +1,42 @@
+﻿@model SisQuejasReclamos.Models.Empleado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departamento.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departamento.Nombre)
+        </dd>
+
+        <dt>
+            Estado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoPersonal.Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id_Empleado }) |
+    @Html.ActionLink("Volver al listado", "Index")
+</p>

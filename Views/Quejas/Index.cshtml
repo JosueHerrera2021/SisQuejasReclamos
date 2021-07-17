@@ -1,0 +1,75 @@
+﻿@model IEnumerable<SisQuejasReclamos.Models.Queja>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de Quejas</h2>
+
+<p>
+    @Html.ActionLink("Agregar nueva Queja", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </th>
+        <th>
+            Departamento
+        </th>
+        <th>
+            Empleado
+        </th>
+        <th>
+            Producto
+        </th>
+        <th>
+            Tipo de Queja
+        </th>
+        <th>
+           Estado
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departamento.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Empleado.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Producto.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoQueja.Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoQR.Descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id_Queja }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id_Queja }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id_Queja })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="963f70c91b8e4722a77cb1aa6bfd4d6c" Name="Diagram1">
+        <EntityTypeShape EntityType="QuejasDBModel.Cliente" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.Departamento" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.Empleado" Width="1.5" PointX="3" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.EstadoG" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.EstadoPersonal" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.EstadoQR" Width="1.5" PointX="3" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.Privilegio" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.Producto" Width="1.5" PointX="3" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.Queja" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.Reclamo" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.TipoQueja" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.TipoReclamo" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuejasDBModel.UsuariosLogin" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="QuejasDBModel.FK_Clientes_EstadoPersonal" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Quejas_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Reclamos_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Operadores_Departamentos" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Quejas_Departamentos" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Reclamos_Departamentos" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Empleados_EstadoPersonal" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Quejas_Empleados" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Reclamos_Operadores" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_TipoQueja_EstadoG" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_TipoReclamo_EstadoG" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_UsuariosLogin_UsuariosLogin" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Quejas_EstadoQR" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Reclamos_EstadoQR" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_UsuariosLogin_Privilegios" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Quejas_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Reclamos_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Quejas_TipoQueja" ManuallyRouted="false" />
+        <AssociationConnector Association="QuejasDBModel.FK_Reclamos_TipoReclamo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
